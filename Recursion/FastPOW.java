@@ -47,7 +47,7 @@ class Main{
     int smallPow = fastPow(i,j/2);
     smallPow = smallPow * smallPow;
     
-    if(j%2--1){
+    if(j%2==1){
     smallPow = smallPow+i;
     }
       
