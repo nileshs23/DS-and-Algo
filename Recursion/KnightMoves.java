@@ -31,8 +31,8 @@ class Main{
   
   	FastReader fr = new FastReader();
   	
-  	int i = fr.nextInt();
-  	int j = fr.nextInt();
+  	int i = fr.nextInt()-1;
+  	int j = fr.nextInt()-1;
   	int moves = fr.nextInt();
   	
   	int[][] board = new int[10][10];
@@ -49,12 +49,12 @@ class Main{
   
   public static void ghodeKiChaal(int row,int col,int[][] board,int moves){
       //boundary conditions
-      if(row < 0 || col<0 || row>=board.length || col >board.length){
+      if(row < 0 || col < 0 || row>=board.length || col >=board.length){
           return ;
       }
       
       if(moves==0){
-         board[row-1][col-1] = 1;
+         board[row][col] = 1;
          return;
      }
       
@@ -86,12 +86,12 @@ class Main{
       
       	for(int m=0;m<10;m++){
   	    for(int n=0;n<10;n++){
-  	        System.out.print(board[m][n]+" ");
+  	     //   System.out.print(board[m][n]+" ");
   	        if(board[m][n]==1){
   	            count++;
   	        }
   	    }
-  	    System.out.println();
+  	 //   System.out.println();
   	}
   	
   	 return count;
